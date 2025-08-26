@@ -1,0 +1,9 @@
+# excludes all
+*
+
+# except
+!front/
+!api/
+!docs/
+!.gitignore
+!README.md
