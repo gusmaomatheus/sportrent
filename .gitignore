@@ -1,9 +1,11 @@
-# excludes all
-*
+# Ignora todos os arquivos e pastas na raiz do projeto
+/*
 
-# except
-!front/
-!api/
-!docs/
-!.gitignore
-!README.md
+# Abre exceções para as pastas que queremos manter.
+# O conteúdo delas não será ignorado.
+!/front/
+!/api/
+!/docs/
+
+# Abre uma exceção para o próprio arquivo .gitignore
+!/.gitignore
