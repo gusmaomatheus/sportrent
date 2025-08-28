@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -6,8 +8,8 @@ export default {
     ],
     theme: {
         extend: {
-            colors: {
-                'azul-celeste': '#36A9E1',
+            fontFamily: {
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
             },
         },
     },
