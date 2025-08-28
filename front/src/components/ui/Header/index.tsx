@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+import { GiSoccerField } from "react-icons/gi";
 import CloseIcon from '../../icons/CloseIcon';
 import MenuIcon from '../../icons/MenuIcon';
 
@@ -26,8 +27,9 @@ const Header: FC = () => {
     return (
         <header className="bg-emerald-600 text-white shadow-md sticky top-0 z-50">
             <div className="container mx-auto flex justify-between items-center p-4">
-                <Link to="/" className="text-2xl font-bold tracking-wider">
-                    Sport Rent
+                <Link to="/" className="flex items-center gap-x-3 text-2xl font-bold tracking-wider">
+                    <GiSoccerField size="48px" />
+                    <span>Sport Rent</span>
                 </Link>
 
                 <nav className="hidden md:flex space-x-6">
