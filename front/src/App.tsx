@@ -3,9 +3,10 @@ import { Route, Routes } from 'react-router-dom';
 
 import Header from './components/ui/Header';
 
-const HomePage: FC = () => <div className="p-8 text-center"><h1>Página Inicial</h1></div>;
-const SobrePage: FC = () => <div className="p-8 text-center"><h1>Página Sobre</h1></div>;
-const ContatoPage: FC = () => <div className="p-8 text-center"><h1>Página de Contato</h1></div>;
+const HomePage: FC = () => <div className="p-8 text-center"><h1>Dashboard</h1></div>;
+const QuadrasPage: FC = () => <div className="p-8 text-center"><h1>Quadras</h1></div>;
+const AgendaPage: FC = () => <div className="p-8 text-center"><h1>Agenda</h1></div>;
+const PagamentoPage: FC = () => <div className="p-8 text-center"><h1>Pagamentos</h1></div>;
 
 const App: FC = () => {
     return (
@@ -14,8 +15,9 @@ const App: FC = () => {
             <main>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/sobre" element={<SobrePage />} />
-                    <Route path="/contato" element={<ContatoPage />} />
+                    <Route path="/quadras" element={<QuadrasPage />} />
+                    <Route path="/agenda" element={<AgendaPage />} />
+                    <Route path="/pagamento" element={<PagamentoPage />} />
                 </Routes>
             </main>
         </div>
