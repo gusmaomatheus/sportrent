@@ -15,9 +15,10 @@ const Header: FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     const navLinks: NavLinkItem[] = [
-        { to: '/', label: 'Início' },
-        { to: '/sobre', label: 'Sobre' },
-        { to: '/contato', label: 'Contato' },
+        { to: '/', label: 'Dashboard' },
+        { to: '/quadras', label: 'Quadras' },
+        { to: '/agenda', label: 'Agenda' },
+        { to: '/pagamento', label: 'Pagamento' },
     ];
 
     const handleLinkClick = (): void => {
