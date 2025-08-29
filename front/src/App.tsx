@@ -1,7 +1,11 @@
 import type { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Header from './components/ui/Header';
+import AuthLayout from './layouts/AuthLayout';
+import MainLayout from './layouts/MainLayout';
+
+import SignInPage from './pages/SignIn';
+import SignUpPage from './pages/SignUp';
 
 const HomePage: FC = () => <div className="p-8 text-center"><h1>Dashboard</h1></div>;
 const QuadrasPage: FC = () => <div className="p-8 text-center"><h1>Quadras</h1></div>;
@@ -10,17 +14,19 @@ const PagamentoPage: FC = () => <div className="p-8 text-center"><h1>Pagamentos<
 
 const App: FC = () => {
     return (
-        <div className="min-h-screen bg-gray-50">
-            <Header />
-            <main>
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/quadras" element={<QuadrasPage />} />
-                    <Route path="/agenda" element={<AgendaPage />} />
-                    <Route path="/pagamento" element={<PagamentoPage />} />
-                </Routes>
-            </main>
-        </div>
+        <Routes>
+            <Route element={<AuthLayout />}>
+                <Route path="/login" element={<SignInPage />} />
+                <Route path="/cadastro" element={<SignUpPage />} />
+            </Route>
+
+            <Route element={<MainLayout />}>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/quadras" element={<QuadrasPage />} />
+                <Route path="/agenda" element={<AgendaPage />} />
+                <Route path="/pagamento" element={<PagamentoPage />} />
+            </Route>
+        </Routes>
     );
 }
 
